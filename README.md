@@ -29,11 +29,18 @@ Peridigm development began under the Physics & Engineering Models element of the
 
 ## Getting Started
 
-Peridigm is a C++ code intended for use on Mac and Linux operating systems.  Both Peridigm and the Trilinos libraries it depends on should be built using MPI compilers and the [CMake](http://www.cmake.org/) build system.  The Peridigm test harness requires [python](https://www.python.org).  The build process has been tested using gcc and Intel compilers, Open MPI, and MPICH.  The steps below should be followed in order, beginning with installation of the required third-party libraries.
+Peridigm is a C++ code intended for use on Mac and Linux operating systems. Peridigm's primary third-party dependency is Trilinos. Trilinos itself is built with many configuration options and third-party dependencies, so you'll want to follow the steps outlined here when configuring your build of Peridigm. We recommend some customization of HDF5 and NetCDF dependencies as part of this build process, as we will outline.
 
- * [Installing Third-Party Packages and Libraries](https://github.com/peridigm/peridigm/blob/master/doc/InstallingThirdPartyLibs.md)
- * [Building Peridigm](https://github.com/peridigm/peridigm/blob/master/doc/BuildingPeridigm.md)
- * [Running Simulations with Peridigm](https://github.com/peridigm/peridigm/blob/master/doc/RunningSimulations.md)
+The build process has been tested using gcc and Intel compilers, Open MPI, and MPICH.  The steps below are not quick but should be followed in order, beginning with installation of the required third-party libraries.
+
+ * [Install Generic Third-Party Packages and Libraries](doc/InstallingThirdPartyLibs.md)
+ * [Install Parallel HDF5](doc/BuildingHDF5.md)
+ * [Modify, Build, and Install NetCDF](doc/BuildingNetCDF.md)
+ * [Configure, Build, and Install Trilinos](doc/BuildingTrilinos.md)
+ * [Build Peridigm](doc/BuildingPeridigm.md)
+
+After you have built Peridigm, you can explore:
+ * [Running Simulations with Peridigm](doc/RunningSimulations.md)
 
 ## Team
 

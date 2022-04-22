@@ -1,6 +1,6 @@
-# Install Third-Party Tools and Libraries
+# Install Standard Third-Party Tools and Libraries
 
-The build process for Peridigm requires a number of third-party tools and libraries to be configured, built, and installed in their typical fashion.
+The build process for Peridigm requires a number of third-party tools and libraries to be configured, built, and installed.
 
 The tools and libraries below do not need to be customized in their builds - a standard build is sufficient. You can either build and install these tools and libraries yourself from source, or install them using your operating system's package manager.
 
@@ -17,4 +17,4 @@ Libraries:
 * [LAPACK](http://www.netlib.org/lapack/) (used when building Trilinos)
 * [yaml-cpp](https://github.com/jbeder/yaml-cpp) (used when building Trilinos)
 
-Once you have all these tools and libraries installed your system, make sure the relevant binaries, shared libraries, and headers for these are all locatable for the next build steps.
+Make sure paths to the relevant binaries, shared libraries, and headers for these tools and libraries are locatable for the next build steps.

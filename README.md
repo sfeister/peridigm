@@ -36,7 +36,7 @@ The build process has been tested using gcc and Intel compilers, Open MPI, and M
  * [Install Standard Third-Party Tools and Libraries](doc/InstallingThirdPartyLibs.md)
  * [Install Parallel HDF5](doc/HDF5.md)
  * [Modify, Build, and Install NetCDF](doc/NetCDF.md)
- * [Configure, Build, and Install Trilinos](doc/BuildingTrilinos.md)
+ * [Configure, Build, and Install Trilinos](doc/Trilinos.md)
  * [Build Peridigm](doc/BuildingPeridigm.md)
 
 After you have built Peridigm, you can explore:

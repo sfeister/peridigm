@@ -1,6 +1,8 @@
-# Install Standard Versions of Several Third-Party Tools and Libraries
+# Install Third-Party Tools and Libraries
 
-The build process for Peridigm requires a number of third-party tools and libraries to be configured, built, and installed in their typical fashion. You can either build and install these libraries yourself, or install them using your operating system's package manager.
+The build process for Peridigm requires a number of third-party tools and libraries to be configured, built, and installed in their typical fashion.
+
+The tools and libraries below do not need to be customized in their builds - a standard build is sufficient. You can either build and install these tools and libraries yourself from source, or install them using your operating system's package manager.
 
 ---
 

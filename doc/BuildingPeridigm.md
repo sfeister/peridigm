@@ -4,27 +4,36 @@ Peridigm utilizes the CMake build system. It is recommended that Makefiles be cr
 
 Below is an example CMake configuration script for Peridigm. Note that the option `-std=c++11` within the `CMAKE_CXX_FLAGS` list is specific to compilers that support C++11 features. A compiler that is C++11 compliant (e.g., GCC 4.7.2 or later) is required for recent versions of Trilinos.
 
-````
+```bash
+#!/bin/bash
+
+# Replace paths below to match your system
+MYPREFIX="/usr/local/peridigm" # installation directory
+MYSOURCE="/home/user1/peridigm" # downloaded peridigm source code directory
+MYMPI="/usr/local/mpi"
+MYHDF5="/usr/local/HDF5"
+MYNETCDF="/usr/local/netcdf"
+MYTRILINOS="/usr/local/trilinos"
+
 rm -f CMakeCache.txt
- 
-cmake \
+
+cmake -D CMAKE_INSTALL_PREFIX:PATH="${MYPREFIX}" \
 -D CMAKE_BUILD_TYPE:STRING=Release \
--D Trilinos_DIR:PATH=/usr/local/trilinos/lib/cmake/Trilinos/ \
--D CMAKE_C_COMPILER:STRING=/usr/local/bin/mpicc \
--D CMAKE_CXX_COMPILER:STRING=/usr/local/bin/mpicxx \
--D BOOST_ROOT=/usr/local/boost/ \
+-D Trilinos_DIR:PATH="${MYTRILINOS}/lib/cmake/Trilinos/" \
+-D CMAKE_C_COMPILER:STRING=/usr/bin/mpicc \
+-D CMAKE_CXX_COMPILER:STRING=/usr/bin/mpicxx \
 -D CMAKE_CXX_FLAGS:STRING="-O2 -Wall -std=c++11 -pedantic -Wno-long-long -ftrapv -Wno-deprecated" \
-<path to Peridigm source directory>
-````
+${MYSOURCE}
+```
 
 Once Peridigm has been successfully configured, it can be compiled as follows:
 
-````
+```bash
 make -j 4
-````
+```
 
-The Peridigm test suite is run as follows:
+The Peridigm test suite is run as follows (uses Python2):
 
-````
+```bash
 make test
-````
+```

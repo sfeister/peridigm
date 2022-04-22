@@ -28,9 +28,9 @@ export F77=mpif77
 
 ```bash
 # (As needed) Include paths to HDF5 and MPI Libraries (mpi.h, in particular)
-# Below, replace the [...] with your own, correct paths.
-export CFLAGS="-I/[...]/[...]/hdf5[...]/include -I/[...]/[...]/mpi[...]/include"
-export LDFLAGS="-L/[...]/[...]/hdf5[...]/lib"
+# Below, replace with your own, correct paths.
+export CFLAGS="-I/usr/local/hdf5/include -I/usr/local/mpi/include"
+export LDFLAGS="-L/usr/local/hdf5/lib"
 ```
 
 ```bash

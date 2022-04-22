@@ -1,17 +1,30 @@
 # Trilinos
 
+[Trilinos](https://trilinos.org/) is a collection of over [50 self-contained packages](https://trilinos.github.io/packages.html). Configuring and building Trilinos with the right subset of packages is essential to building Peridigm in the next step.
+
 A number of [Trilinos](https://trilinos.org/) packages are required by Peridigm. The Trilinos source code distribution includes the full set of Trilinos packages, each of which may be activated or deactivated using CMake build options, as described below. It is recommended that Makefiles be created by running `cmake` from the command line, as opposed to using the `ccmake` GUI.
+
+Notable required packages from Trilinos are:
+* SEACAS
+* yaml-cpp
 
 For additional details on obtaining, configuring, and building Trilinos, please visit the [Trilinos website](https://trilinos.github.io).
 
 Below is an example CMake configuration script for Trilinos. Note that the option `-std=c++11` within the `CMAKE_CXX_FLAGS` list is specific to compilers that support C++11 features. A compiler that is C++11 compliant (e.g., GCC 4.7.2 or later) is required for recent versions of Trilinos.
 
+```
+#!/bin/bash
 
-````
+MYPREFIX="/home/scott/pkg/trilinos-13-0-1-install" # installation directory
+MYSOURCE="/home/scott/pkg/Trilinos-trilinos-release-13-0-1" # trilinos source directory
+MYMPI="/usr/lib/x86_64-linux-gnu/openmpi"
+MYHDF5="/home/scott/pkg/hdf5-1.10.8-install"
+MYNETCDF="/home/scott/pkg/netcdf-c-4.7.4-modified-install"
+
 rm -f CMakeCache.txt
 
-cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr/local/trilinos \
--D MPI_BASE_DIR:PATH="/usr/local/openmpi/" \
+cmake -D CMAKE_INSTALL_PREFIX:PATH="${MYPREFIX}" \
+-D MPI_BASE_DIR:PATH="${MYMPI}" \
 -D CMAKE_CXX_FLAGS:STRING="-O2 -std=c++11 -pedantic -ftrapv -Wall -Wno-long-long" \
 -D CMAKE_BUILD_TYPE:STRING=RELEASE \
 -D Trilinos_WARNINGS_AS_ERRORS_FLAGS:STRING="" \
@@ -41,30 +54,30 @@ cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr/local/trilinos \
 -D Trilinos_ENABLE_Teko:BOOL=ON \
 -D Trilinos_ENABLE_SEACASIoss:BOOL=ON \
 -D Trilinos_ENABLE_SEACAS:BOOL=ON \
--D Trilinos_ENABLE_SEACASBlot:BOOL=ON \
+-D Trilinos_ENABLE_SEACASBlot:BOOL=OFF \
 -D Trilinos_ENABLE_Pamgen:BOOL=ON \
 -D Trilinos_ENABLE_EXAMPLES:BOOL=OFF \
 -D Trilinos_ENABLE_TESTS:BOOL=ON \
 -D TPL_ENABLE_HDF5:BOOL=ON \
--D HDF5_INCLUDE_DIRS:PATH="/usr/local/hdf5/include" \
--D HDF5_LIBRARY_DIRS:PATH="/usr/local/hdf5/lib" \
+-D HDF5_INCLUDE_DIRS:PATH="${MYHDF5}/include" \
+-D HDF5_LIBRARY_DIRS:PATH="${MYHDF5}/lib" \
 -D TPL_ENABLE_Netcdf:BOOL=ON \
 -D TPL_Netcdf_Enables_Netcdf4:BOOL=ON \
--D Netcdf_INCLUDE_DIRS:PATH=/usr/local/netcdf/include \
--D Netcdf_LIBRARY_DIRS:PATH=/usr/local/netcdf/lib \
+-D Netcdf_INCLUDE_DIRS:PATH="${MYNETCDF}/include" \
+-D Netcdf_LIBRARY_DIRS:PATH="${MYNETCDF}/lib" \
 -D TPL_ENABLE_MPI:BOOL=ON \
 -D TPL_ENABLE_BLAS:BOOL=ON \
 -D TPL_ENABLE_LAPACK:BOOL=ON \
 -D TPL_ENABLE_Boost:BOOL=ON \
--D Boost_INCLUDE_DIRS:PATH=/usr/local/boost/include \
--D Boost_LIBRARY_DIRS:PATH=/usr/local/boost/lib \
+-D TPL_ENABLE_Matio:BOOL=OFF \
+-D TPL_ENABLE_X11:BOOL=OFF \
+-D TPL_ENABLE_yaml-cpp:BOOL=ON \
 -D CMAKE_VERBOSE_MAKEFILE:BOOL=OFF \
 -D Trilinos_VERBOSE_CONFIGURE:BOOL=OFF \
-<path to Trilinos source directory>
-````
+${MYSOURCE}
+```
 
 Once Trilinos has been successfully configured, it can be compiled and installed as follows:
-
 ````
 make -j 8
 make install

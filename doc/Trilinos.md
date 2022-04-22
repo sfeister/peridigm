@@ -4,9 +4,7 @@
 
 A number of [Trilinos](https://trilinos.org/) packages are required by Peridigm. The Trilinos source code distribution includes the full set of Trilinos packages, each of which may be activated or deactivated using CMake build options, as described below. It is recommended that Makefiles be created by running `cmake` from the command line, as opposed to using the `ccmake` GUI.
 
-Notable required packages from Trilinos are:
-* SEACAS
-* yaml-cpp
+The most notable required package from Trilinos is SEACAS, which is used for input/output in the Exodus file format.
 
 For additional details on obtaining, configuring, and building Trilinos, please visit the [Trilinos website](https://trilinos.github.io).
 
@@ -15,11 +13,12 @@ Below is an example CMake configuration script for Trilinos. Note that the optio
 ```
 #!/bin/bash
 
-MYPREFIX="/home/scott/pkg/trilinos-13-0-1-install" # installation directory
-MYSOURCE="/home/scott/pkg/Trilinos-trilinos-release-13-0-1" # trilinos source directory
-MYMPI="/usr/lib/x86_64-linux-gnu/openmpi"
-MYHDF5="/home/scott/pkg/hdf5-1.10.8-install"
-MYNETCDF="/home/scott/pkg/netcdf-c-4.7.4-modified-install"
+# Replace the following with the correct paths for your system
+MYPREFIX="/usr/local/trilinos" # installation directory
+MYSOURCE="/home/user1/Trilinos-release" # downloaded trilinos source code directory
+MYMPI="/usr/local/mpi"
+MYHDF5="/usr/local/HDF5"
+MYNETCDF="/usr/local/netcdf"
 
 rm -f CMakeCache.txt
 

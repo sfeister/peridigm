@@ -10,9 +10,6 @@ Below is an example CMake configuration script for Peridigm. Note that the optio
 # Replace paths below to match your system
 MYPREFIX="/usr/local/peridigm" # installation directory
 MYSOURCE="/home/user1/peridigm" # downloaded peridigm source code directory
-MYMPI="/usr/local/mpi"
-MYHDF5="/usr/local/HDF5"
-MYNETCDF="/usr/local/netcdf"
 MYTRILINOS="/usr/local/trilinos"
 
 rm -f CMakeCache.txt

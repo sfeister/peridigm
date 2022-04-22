@@ -1,21 +1,10 @@
-# NetCDF
+#  NetCDF
 
-[NetCDF](https://github.com/Unidata/netcdf-c/releases) is required by the Trilinos SEACAS package. 
-Prior to compiling NetCDF, it is recommended that you modify the file netcdf.h to better support 
-large-scale Peridigm simulations, as described below.
+[NetCDF](https://github.com/Unidata/netcdf-c/releases), built with reference to parallel HDF5, is required by the Trilinos SEACAS package. Prior to compiling NetCDF, it is recommended that you modify the source code as described below to better support 
+large-scale Peridigm simulations.
 
-An example build process for [NetCDF](https://github.com/Unidata/netcdf-c/releases):
-
-
-````
-# Set environment variables for MPI compilers
-export CC=mpicc
-export CXX=mpicxx
-export FC=mpif90
-export F77=mpif77
-````
-
-Modify the following `#define` statements in the `netcdf.h` file.  Change the values to match what is given below.
+## Modify the NetCDF-C Source Code
+After downloading the [NetCDF-C source code](https://github.com/Unidata/netcdf-c/releases), modify the following `#define` statements in the `netcdf.h` file. This file is located in the `include` directory of the NetCDF-C source code.  Change the values to match what is given below.
 
 ````
 #define NC_MAX_DIMS 65536                                                                                                    
@@ -25,8 +14,24 @@ Modify the following `#define` statements in the `netcdf.h` file.  Change the va
 #define NC_MAX_VAR_DIMS 8   
 ````
 
-Alternatively, you can install [this fork](https://github.com/johntfoster/netcdf-c) of NetCDF where the changes have already
-been made.  This version is known to work with Trilinos and Peridigm.
+## Build the Modified Version of NetCDF
+
+An example build process for [NetCDF](https://github.com/Unidata/netcdf-c/releases):
+
+````
+# Set environment variables for MPI compilers
+export CC=mpicc
+export CXX=mpicxx
+export FC=mpif90
+export F77=mpif77
+````
+
+````
+# (As needed) Include paths to HDF5 and MPI Libraries (mpi.h, in particular)
+# Below, replace the [...] with your own, correct paths.
+export CFLAGS="-I/[...]/[...]/hdf5[...]/include -I/[...]/[...]/mpi[...]/include"
+export LDFLAGS="-L/[...]/[...]/hdf5[...]/lib"
+```
 
 ````
 # Configure NetCDF

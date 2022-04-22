@@ -33,9 +33,9 @@ Peridigm is a C++ code intended for use on Mac and Linux operating systems. Peri
 
 The build process has been tested using gcc and Intel compilers, Open MPI, and MPICH.  The steps below are not quick but should be followed in order, beginning with installation of the required third-party libraries.
 
- * [Install Generic Third-Party Packages and Libraries](doc/InstallingThirdPartyLibs.md)
- * [Install Parallel HDF5](doc/BuildingHDF5.md)
- * [Modify, Build, and Install NetCDF](doc/BuildingNetCDF.md)
+ * [Install Standard Third-Party Tools and Libraries](doc/InstallingThirdPartyLibs.md)
+ * [Install Parallel HDF5](doc/HDF5.md)
+ * [Modify, Build, and Install NetCDF](doc/NetCDF.md)
  * [Configure, Build, and Install Trilinos](doc/BuildingTrilinos.md)
  * [Build Peridigm](doc/BuildingPeridigm.md)
 

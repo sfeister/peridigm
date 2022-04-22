@@ -10,7 +10,7 @@ For additional details on obtaining, configuring, and building Trilinos, please 
 
 Below is an example CMake configuration script for Trilinos. Note that the option `-std=c++11` within the `CMAKE_CXX_FLAGS` list is specific to compilers that support C++11 features. A compiler that is C++11 compliant (e.g., GCC 4.7.2 or later) is required for recent versions of Trilinos.
 
-```
+```bash
 #!/bin/bash
 
 # Replace the following with the correct paths for your system
@@ -67,7 +67,7 @@ cmake -D CMAKE_INSTALL_PREFIX:PATH="${MYPREFIX}" \
 -D TPL_ENABLE_MPI:BOOL=ON \
 -D TPL_ENABLE_BLAS:BOOL=ON \
 -D TPL_ENABLE_LAPACK:BOOL=ON \
--D TPL_ENABLE_Boost:BOOL=ON \
+-D TPL_ENABLE_Boost:BOOL=OFF \
 -D TPL_ENABLE_Matio:BOOL=OFF \
 -D TPL_ENABLE_X11:BOOL=OFF \
 -D TPL_ENABLE_yaml-cpp:BOOL=ON \

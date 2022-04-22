@@ -1,6 +1,7 @@
 ## HDF5
+[HDF5](https://www.hdfgroup.org/solutions/hdf5) libraries are required by NetCDF and the SEACAS Trilinos package. HDF5 should be configured with the `--enable-parallel` option.
 
-[HDF5](https://www.hdfgroup.org/solutions/hdf5) is required by NetCDF and the SEACAS Trilinos package. HDF5 should be configured with the `--enable-parallel` option.
+If you choose to use a package manager to install these libraries instead of building from source, make sure you install parallel HDF5 - not the more typical serial HDF5.
 
 An example build process for [HDF5](https://www.hdfgroup.org/solutions/hdf5):
 

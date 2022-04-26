@@ -1,4 +1,4 @@
-# Trilinos
+# Configure, Build, and Install Trilinos
 
 ## Overview
 [Trilinos](https://trilinos.org/) is a collection of over [50 self-contained packages](https://trilinos.github.io/packages.html). Configuring and building Trilinos with the right subset of packages is essential to building Peridigm in the next step.
@@ -29,7 +29,7 @@ And here are required TPL elements:
 * LAPACK
 * yaml-cpp
 
-## Example CMake Configuration
+## Example CMake Configuration of Trilinos
 Below is an example CMake configuration script for Trilinos, which **enables everything outlined above** and little else. Note that the option `-std=c++11` within the `CMAKE_CXX_FLAGS` list is specific to compilers that support C++11 features. A compiler that is C++11 compliant (e.g., GCC 4.7.2 or later) is required for recent versions of Trilinos.
 
 ```bash
@@ -79,6 +79,7 @@ cmake -D CMAKE_INSTALL_PREFIX:PATH="${MYPREFIX}" \
 ${MYSOURCE}
 ```
 
+## Example Build and Install of Trilinos
 Once Trilinos has been successfully configured, it can be compiled and installed as follows:
 ````
 make -j 8

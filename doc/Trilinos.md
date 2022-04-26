@@ -30,7 +30,7 @@ And here are required TPL elements:
 * yaml-cpp
 
 ## Example CMake Configuration of Trilinos
-Below is an example CMake configuration script for Trilinos, which **enables everything outlined above** and little else. Note that the option `-std=c++11` within the `CMAKE_CXX_FLAGS` list is specific to compilers that support C++11 features. A compiler that is C++11 compliant (e.g., GCC 4.7.2 or later) is required for recent versions of Trilinos.
+Below is an example CMake configuration script for Trilinos, which **enables everything outlined above**. In the configuration below, that which isn't required for Peridigm is not enabled (to speed up compilation). Note that the option `-std=c++11` within the `CMAKE_CXX_FLAGS` list is specific to compilers that support C++11 features. A compiler that is C++11 compliant (e.g., GCC 4.7.2 or later) is required for recent versions of Trilinos.
 
 ```bash
 #!/bin/bash

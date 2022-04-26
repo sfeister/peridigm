@@ -11,7 +11,7 @@ For additional details on obtaining, configuring, and building Trilinos, please 
 Here are all the required Trilinos packages needed for Peridigm:
 * Belos
 * Epetra
-* Epetra
+* EpetraExt
 * Ifpack
 * NOX
 * Sacado

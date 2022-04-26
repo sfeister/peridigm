@@ -4,7 +4,7 @@
 
 A number of [Trilinos](https://trilinos.org/) packages are required by Peridigm. The Trilinos source code distribution includes the full set of Trilinos packages, each of which may be activated or deactivated using CMake build options, as described below. It is recommended that Makefiles be created by running `cmake` from the command line, as opposed to using the `ccmake` GUI.
 
-The most notable required package from Trilinos is SEACAS, which is used for input/output in the Exodus file format. Here are all the required Trilinos packages needed for Peridigm:
+Here are all the required Trilinos packages needed for Peridigm:
 * Belos
 * Epetra
 * Epetra
@@ -14,6 +14,8 @@ The most notable required package from Trilinos is SEACAS, which is used for inp
 * SEACAS
 * SEACASIoss
 * Teuchos
+
+The most notable required package above is SEACAS, which is used for input/output in the Exodus file format. 
 
 And here are required TPL elements:
 * HDF5

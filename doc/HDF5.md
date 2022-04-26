@@ -5,7 +5,7 @@ If you choose to use a package manager to install the HDF5 libraries rather than
 
 An example build process for [HDF5](https://www.hdfgroup.org/solutions/hdf5):
 
-````
+````bash
 # Set environment variables for MPI compilers
 export CC=mpicc
 export CXX=mpicxx

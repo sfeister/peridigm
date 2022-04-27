@@ -3,9 +3,9 @@
 ## Overview
 [Trilinos](https://trilinos.org/) is a collection of over [50 self-contained packages](https://trilinos.github.io/packages.html). Configuring and building Trilinos with the right subset of packages is essential to building Peridigm in the next step.
 
-A number of [Trilinos](https://trilinos.org/) packages are required by Peridigm. The Trilinos source code distribution includes the full set of Trilinos packages, each of which may be activated or deactivated using CMake build options, as described below. It is recommended that Makefiles be created by running `cmake` from the command line, as opposed to using the `ccmake` GUI.
+A number of Trilinos packages are required by Peridigm. The Trilinos source code distribution includes the full set of Trilinos packages, each of which may be activated or deactivated using CMake build options, as described below. It is recommended that Makefiles be created by running `cmake` from the command line, as opposed to using the `ccmake` GUI.
 
-For additional details on obtaining, configuring, and building Trilinos, please visit the [Trilinos website](https://trilinos.github.io).
+For additional details on obtaining, configuring, and building Trilinos, please visit the [Trilinos repo](https://trilinos.github.io).
 
 ## Minimal Trilinos Requirements for Peridigm
 Here are all the required Trilinos packages needed for Peridigm:

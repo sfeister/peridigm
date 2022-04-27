@@ -21,7 +21,7 @@ Here are all the required Trilinos packages needed for Peridigm:
 
 The most notable required package above is SEACAS, which is used for input/output in the Exodus file format. 
 
-And here are required TPL elements:
+And here are required third party library (TPL) elements:
 * HDF5
 * Netcdf
 * MPI

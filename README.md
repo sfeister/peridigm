@@ -4,7 +4,7 @@ Peridigm is an open-source computational peridynamics code developed, originally
 
 The [peridigm-users](https://software.sandia.gov/mailman/listinfo/peridigm-users) e-mail list connects Peridigm enthusiasts and provides a forum for user questions.
 
-The 2012 [Peridigm Users' Guide](http://www.sandia.gov/~djlittl/docs/PeridigmV1.0.0.pdf) gives an overview of Peridigm's core capabilities. Further details on software for computational peridynamics can be found in the [Roadmap for Peridynamic Software Implementation](http://www.sandia.gov/~djlittl/docs/PeridynamicSoftwareRoadmap.pdf).
+The 2012 [Peridigm Users' Guide](https://elib.dlr.de/126320/1/Peridigm_Users_Guide.pdf) gives an overview of Peridigm's core capabilities. Further details on software for computational peridynamics can be found in the [Roadmap for Peridynamic Software Implementation](https://www.osti.gov/biblio/1226115-roadmap-peridynamic-software-implementation)
 
 Peridigm development began under the Physics & Engineering Models element of the US DOE's Advanced Simulation and Computing (ASC) program.  The project was led by Michael Parks and managed by John Aidun.  Subsequent funding has been provided by the US DOE through the ASC, ASCR, and LDRD programs.
 

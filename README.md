@@ -39,7 +39,7 @@ After you have built Peridigm, you can explore:
  * [Running Simulations with Peridigm](doc/RunningSimulations.md)
 
 
-## User-Created Resources
+## Documentation and Support by Users
 
 The [peridigm-users](https://software.sandia.gov/mailman/listinfo/peridigm-users) e-mail list connects Peridigm enthusiasts and provides a forum for user questions.
 

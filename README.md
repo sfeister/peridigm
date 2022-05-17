@@ -2,10 +2,6 @@
 
 Peridigm is an open-source computational peridynamics code developed, originally at Sandia National Laboratories and open-sourced in 2011, for massively-parallel multi-physics simulations.  It has been applied primarily to problems in solid mechanics involving pervasive material failure.  Peridigm is a C++ code utilizing foundational software components from Sandia's Trilinos project and is fully compatible with the Cubit mesh generator and Paraview visualization code.
 
-The [peridigm-users](https://software.sandia.gov/mailman/listinfo/peridigm-users) e-mail list connects Peridigm enthusiasts and provides a forum for user questions.
-
-The 2012 [Peridigm Users' Guide](https://elib.dlr.de/126320/1/Peridigm_Users_Guide.pdf) gives an overview of Peridigm's core capabilities. Further details on software for computational peridynamics can be found in the [Roadmap for Peridynamic Software Implementation](https://www.osti.gov/biblio/1226115-roadmap-peridynamic-software-implementation)
-
 Peridigm development began under the Physics & Engineering Models element of the US DOE's Advanced Simulation and Computing (ASC) program.  The project was led by Michael Parks and managed by John Aidun.  Subsequent funding has been provided by the US DOE through the ASC, ASCR, and LDRD programs.
 
 ## Examples
@@ -41,6 +37,21 @@ The build process has been tested using gcc and Intel compilers, Open MPI, and M
 
 After you have built Peridigm, you can explore:
  * [Running Simulations with Peridigm](doc/RunningSimulations.md)
+
+
+## User Resources
+
+The [peridigm-users](https://software.sandia.gov/mailman/listinfo/peridigm-users) e-mail list connects Peridigm enthusiasts and provides a forum for user questions.
+
+The [2018 Peridigm Users' Guide](https://elib.dlr.de/126320/1/Peridigm_Users_Guide.pdf) gives an overview of Peridigm's core capabilities.
+
+The [2012 Peridigm Users' Guide](https://www.semanticscholar.org/paper/Peridigm-Users%27-Guide-v1.0.0-Report-Parks/5d9a21c3aa334ce182682c4c0c3e717d3bf156ac) gives a different overview, with more details on certain topics.
+
+A [Peridigm Installation Guide](https://elib.dlr.de/126321) may also be helpful, and complements what is overviewed below with more detail for specific systems.
+
+[YouTube Tutorial Videos](https://www.youtube.com/channel/UCp6JvW8EJYE-Bglh8sAiIzA) are also available by the community of users.
+
+Further details on software for computational peridynamics can be found in the [Roadmap for Peridynamic Software Implementation](https://www.osti.gov/biblio/1226115-roadmap-peridynamic-software-implementation)
 
 ## Team
 

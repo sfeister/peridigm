@@ -39,7 +39,7 @@ After you have built Peridigm, you can explore:
  * [Running Simulations with Peridigm](doc/RunningSimulations.md)
 
 
-## User Resources
+## User-Created Resources
 
 The [peridigm-users](https://software.sandia.gov/mailman/listinfo/peridigm-users) e-mail list connects Peridigm enthusiasts and provides a forum for user questions.
 
@@ -47,11 +47,11 @@ The [2018 Peridigm Users' Guide](https://elib.dlr.de/126320/1/Peridigm_Users_Gui
 
 The [2012 Peridigm Users' Guide](https://www.semanticscholar.org/paper/Peridigm-Users%27-Guide-v1.0.0-Report-Parks/5d9a21c3aa334ce182682c4c0c3e717d3bf156ac) gives a different overview, with more details on certain topics.
 
-A [Peridigm Installation Guide](https://elib.dlr.de/126321) may also be helpful, and complements what is overviewed below with more detail for specific systems.
-
 [YouTube Tutorial Videos](https://www.youtube.com/channel/UCp6JvW8EJYE-Bglh8sAiIzA) are also available by the community of users.
 
 Further details on software for computational peridynamics can be found in the [Roadmap for Peridynamic Software Implementation](https://www.osti.gov/biblio/1226115-roadmap-peridynamic-software-implementation)
+
+During installation, you might find that this [Peridigm Installation Guide](https://elib.dlr.de/126321) complements what is overviewed in the sections above.
 
 ## Team
 
